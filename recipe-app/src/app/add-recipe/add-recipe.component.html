@@ -1,0 +1,14 @@
+<p>add-recipe works!</p>
+<label>NgModel input</label>
+<input type="text" [(ngModel)] ="binding" />
+{{binding}}
+
+<form [formGroup]="addRecipeForm" (ngSubmit)="onSubmit()">
+    <label>Name</label>
+    <input type="text" formControlName="name"/>
+
+    <label>Preparation Time</label>
+    <input type="number" formControlName="preparationTime"/>
+
+    <button type="submit">Submit</button>
+</form>
